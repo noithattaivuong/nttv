@@ -28,9 +28,18 @@ module.exports = {
     get: async function (req, res, next) {
         try {
             const { ma } = req.params;
+            if (!ma) {
+                return res.status(401).json({
+                    error: {
+                        message: 'ma not found'
+                    }
+                })
+            }
+
             let draw = await Draw.findOne({
                 where: { ma: ma },
             });
+
             if (!draw) {
                 return res.status(401).json({
                     error: {

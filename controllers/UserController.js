@@ -15,6 +15,14 @@ var self = module.exports = {
     getByUsername: async function (req, res, next) {
         try {
             const { username } = req.params;
+            if (!username) {
+                return res.status(401).json({
+                    error: {
+                        message: 'Vui lòng điền đầy đủ thông tin'
+                    }
+                })
+            }
+
             let user = await User.findOne({
                 where: { username: username },
             });
