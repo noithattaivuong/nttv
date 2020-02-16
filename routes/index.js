@@ -8,6 +8,11 @@ const createError = require('http-errors')
 const authenticate = require('../lib/authenticate')
 
 module.exports = (app) => {
+
+    app.get('/',function(req,res,next){
+        res.send('hello word')
+    })
+
     app.use('/account', AccountRouter)
     app.use('/product', ProductRouter)
     app.use('/project', ProjectRouter)
