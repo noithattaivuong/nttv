@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "18db7885-34d9-49fc-8f80-c8096968b240",
+		"name": "Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/project/ma/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/project/ma/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project",
+						"ma",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/project/top/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/project/top/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project",
+						"top",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZSI6eyJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6IkFkbWluVGhhbyIsInBhc3N3b3JkIjoiMTIzIiwiZW1haWwiOiJ0YW9udWFhMDA0QGdtYWlsLmNvbSIsInNkdCI6IjEyMzQ1NiIsImNyZWF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiJ9LCJpYXQiOjE1ODE3ODAxMjMsImV4cCI6MTU4MTc5NDUyM30.hTRwtrWVbX9mohzLxvkfGBbnJuoNrlaXUtFYvFQXo2w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "proejct1",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "https://salt.tikicdn.com/cache/75x75/ts/product/d9/33/3c/7167b9e8aca89a068b4bcf417e54d577.jpg",
+							"type": "text"
+						},
+						{
+							"key": "detail",
+							"value": "dự án này là nhu vay đó, bạn có tiền mua không mà  xem",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "khog ci gi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/project Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZSI6eyJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6IkFkbWluVGhhbyIsInBhc3N3b3JkIjoiMTIzIiwiZW1haWwiOiJ0YW9udWFhMDA0QGdtYWlsLmNvbSIsInNkdCI6IjEyMzQ1NiIsImNyZWF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiJ9LCJpYXQiOjE1ODE3ODAxMjMsImV4cCI6MTU4MTc5NDUyM30.hTRwtrWVbX9mohzLxvkfGBbnJuoNrlaXUtFYvFQXo2w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "proejct2",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "https://salt.tikicdn.com/cache/75x75/ts/product/d9/33/3c/7167b9e8aca89a068b4bcf417e54d577.jpg",
+							"type": "text"
+						},
+						{
+							"key": "detail",
+							"value": "cái dự án 1 không co 1tirn62 mua, thì dự án 2 sao mua nổi",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "khog ci gi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/project/ma/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZSI6eyJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6IkFkbWluVGhhbyIsInBhc3N3b3JkIjoiMTIzIiwiZW1haWwiOiJ0YW9udWFhMDA0QGdtYWlsLmNvbSIsInNkdCI6IjEyMzQ1NiIsImNyZWF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiJ9LCJpYXQiOjE1ODE3ODAxMjMsImV4cCI6MTU4MTc5NDUyM30.hTRwtrWVbX9mohzLxvkfGBbnJuoNrlaXUtFYvFQXo2w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "proejct1",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "https://salt.tikicdn.com/cache/75x75/ts/product/d9/33/3c/7167b9e8aca89a068b4bcf417e54d577.jpg",
+							"type": "text"
+						},
+						{
+							"key": "detail",
+							"value": "dự án này là nhu vay đó, bạn có tiền mua không mà  xem",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test update",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/project/ma/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project",
+						"ma",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/project/ma/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZSI6eyJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6IkFkbWluVGhhbyIsInBhc3N3b3JkIjoiMTIzIiwiZW1haWwiOiJ0YW9udWFhMDA0QGdtYWlsLmNvbSIsInNkdCI6IjEyMzQ1NiIsImNyZWF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiJ9LCJpYXQiOjE1ODE3ODAxMjMsImV4cCI6MTU4MTc5NDUyM30.hTRwtrWVbX9mohzLxvkfGBbnJuoNrlaXUtFYvFQXo2w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/project/ma/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project",
+						"ma",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

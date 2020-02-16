@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "26c386f5-e48b-4f19-9252-cd4741f7ae20",
+		"name": "Profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/profile/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYW8iLCJyb2xlIjoidXNlciIsInByb2ZpbGUiOnsidXNlcm5hbWUiOiJ0aGFvIiwibmFtZSI6IlRoYW8iLCJwYXNzd29yZCI6IjEyMyIsImVtYWlsIjoidGFvbnVhYTAwNEBnbWFpbC5jb20iLCJzZHQiOiIxMjM0NTYiLCJjcmVhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoifSwiaWF0IjoxNTgxNzgwMDg1LCJleHAiOjE1ODE3OTQ0ODV9.EFxtJGUY3Rzu4i3paeLpF8w0RTI9SmXh4G-WlLgHolE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/profile/draw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYW8iLCJyb2xlIjoidXNlciIsInByb2ZpbGUiOnsidXNlcm5hbWUiOiJ0aGFvIiwibmFtZSI6IlRoYW8iLCJwYXNzd29yZCI6IjEyMyIsImVtYWlsIjoidGFvbnVhYTAwNEBnbWFpbC5jb20iLCJzZHQiOiIxMjM0NTYiLCJjcmVhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoifSwiaWF0IjoxNTgxNzgwMDg1LCJleHAiOjE1ODE3OTQ0ODV9.EFxtJGUY3Rzu4i3paeLpF8w0RTI9SmXh4G-WlLgHolE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/profile/draw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"draw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/profile/draw byName",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYW8iLCJyb2xlIjoidXNlciIsInByb2ZpbGUiOnsidXNlcm5hbWUiOiJ0aGFvIiwibmFtZSI6IlRoYW8iLCJwYXNzd29yZCI6IjEyMyIsImVtYWlsIjoidGFvbnVhYTAwNEBnbWFpbC5jb20iLCJzZHQiOiIxMjM0NTYiLCJjcmVhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoifSwiaWF0IjoxNTgxNzgwMDg1LCJleHAiOjE1ODE3OTQ0ODV9.EFxtJGUY3Rzu4i3paeLpF8w0RTI9SmXh4G-WlLgHolE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/profile/draw?name=test1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"draw"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/profile/draw/name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYW8iLCJyb2xlIjoidXNlciIsInByb2ZpbGUiOnsidXNlcm5hbWUiOiJ0aGFvIiwibmFtZSI6IlRoYW8iLCJwYXNzd29yZCI6IjEyMyIsImVtYWlsIjoidGFvbnVhYTAwNEBnbWFpbC5jb20iLCJzZHQiOiIxMjM0NTYiLCJjcmVhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoifSwiaWF0IjoxNTgxNzgwMDg1LCJleHAiOjE1ODE3OTQ0ODV9.EFxtJGUY3Rzu4i3paeLpF8w0RTI9SmXh4G-WlLgHolE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/profile/draw/name/anhtest1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"draw",
+						"name",
+						"anhtest1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/profile/draw/ma/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYW8iLCJyb2xlIjoidXNlciIsInByb2ZpbGUiOnsidXNlcm5hbWUiOiJ0aGFvIiwibmFtZSI6IlRoYW8iLCJwYXNzd29yZCI6IjEyMyIsImVtYWlsIjoidGFvbnVhYTAwNEBnbWFpbC5jb20iLCJzZHQiOiIxMjM0NTYiLCJjcmVhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoifSwiaWF0IjoxNTgxNzgwMDg1LCJleHAiOjE1ODE3OTQ0ODV9.EFxtJGUY3Rzu4i3paeLpF8w0RTI9SmXh4G-WlLgHolE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/profile/draw/ma/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"draw",
+						"ma",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/profile/draw/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYW8iLCJyb2xlIjoidXNlciIsInByb2ZpbGUiOnsidXNlcm5hbWUiOiJ0aGFvIiwibmFtZSI6IlRoYW8iLCJwYXNzd29yZCI6IjEyMyIsImVtYWlsIjoidGFvbnVhYTAwNEBnbWFpbC5jb20iLCJzZHQiOiIxMjM0NTYiLCJjcmVhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoifSwiaWF0IjoxNTgxNzgwMDg1LCJleHAiOjE1ODE3OTQ0ODV9.EFxtJGUY3Rzu4i3paeLpF8w0RTI9SmXh4G-WlLgHolE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "anh_tu_user1",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "{}",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "khong co",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/profile/draw/ma/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYW8iLCJyb2xlIjoidXNlciIsInByb2ZpbGUiOnsidXNlcm5hbWUiOiJ0aGFvIiwibmFtZSI6IlRoYW8iLCJwYXNzd29yZCI6IjEyMyIsImVtYWlsIjoidGFvbnVhYTAwNEBnbWFpbC5jb20iLCJzZHQiOiIxMjM0NTYiLCJjcmVhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoifSwiaWF0IjoxNTgxNzgwMDg1LCJleHAiOjE1ODE3OTQ0ODV9.EFxtJGUY3Rzu4i3paeLpF8w0RTI9SmXh4G-WlLgHolE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "anh_tu_user2",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "{}",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test updae",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/profile/draw/ma/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"draw",
+						"ma",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/profile/draw/ma/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYW8iLCJyb2xlIjoidXNlciIsInByb2ZpbGUiOnsidXNlcm5hbWUiOiJ0aGFvIiwibmFtZSI6IlRoYW8iLCJwYXNzd29yZCI6IjEyMyIsImVtYWlsIjoidGFvbnVhYTAwNEBnbWFpbC5jb20iLCJzZHQiOiIxMjM0NTYiLCJjcmVhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTAyLTE1VDE1OjE4OjA1LjAwMFoifSwiaWF0IjoxNTgxNzgwMDg1LCJleHAiOjE1ODE3OTQ0ODV9.EFxtJGUY3Rzu4i3paeLpF8w0RTI9SmXh4G-WlLgHolE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/profile/draw/ma/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile",
+						"draw",
+						"ma",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

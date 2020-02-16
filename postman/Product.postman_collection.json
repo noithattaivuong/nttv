@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "668e3897-da15-4806-8aaf-c7ca3fa9e2bb",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/product/ma/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZSI6eyJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6IkFkbWluVGhhbyIsInBhc3N3b3JkIjoiMTIzIiwiZW1haWwiOiJ0YW9udWFhMDA0QGdtYWlsLmNvbSIsInNkdCI6IjEyMzQ1NiIsImNyZWF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiJ9LCJpYXQiOjE1ODE3ODAxMjMsImV4cCI6MTU4MTc5NDUyM30.hTRwtrWVbX9mohzLxvkfGBbnJuoNrlaXUtFYvFQXo2w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "sanpham1",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "https://salt.tikicdn.com/cache/75x75/ts/product/d9/33/3c/7167b9e8aca89a068b4bcf417e54d577.jpg",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "khog ci gi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/product Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZSI6eyJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6IkFkbWluVGhhbyIsInBhc3N3b3JkIjoiMTIzIiwiZW1haWwiOiJ0YW9udWFhMDA0QGdtYWlsLmNvbSIsInNkdCI6IjEyMzQ1NiIsImNyZWF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjAtMDItMTVUMTU6MTg6MzYuMDAwWiJ9LCJpYXQiOjE1ODE3ODAxMjMsImV4cCI6MTU4MTc5NDUyM30.hTRwtrWVbX9mohzLxvkfGBbnJuoNrlaXUtFYvFQXo2w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "sanpham2",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "5000",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "https://xuongdogogiagoc.com/wp-content/uploads/2018/04/5-11.jpg",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "45",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "khog ci gi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/product/ma/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZSI6eyJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6IkFkbWluVGhhbyIsInBhc3N3b3JkIjoiMTIzIiwiZW1haWwiOiJ0YW9udWFhMDA0QGdtYWlsLmNvbSIsInNkdCI6IjEyMzQ1NiIsImNyZWF0ZWRBdCI6IjIwMjAtMDItMTRUMTk6MDE6MjYuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjAtMDItMTRUMTk6MDE6MjYuMDAwWiJ9LCJpYXQiOjE1ODE3MDc2OTIsImV4cCI6MTU4MTcyMjA5Mn0.5cfNg_DOyqFPUI0ouf4gTJylavqvDDkhzdjT5iJDZBs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "sanpham1",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "https://salt.tikicdn.com/cache/75x75/ts/product/d9/33/3c/7167b9e8aca89a068b4bcf417e54d577.jpg",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "khog ci gi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/product/ma/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"ma",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
