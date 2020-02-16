@@ -3,7 +3,7 @@ const app = express();
 const config = require('./lib/config')
 console.log(config)
 require('./lib/express')(app, express);
-require('./route')(app);
+require('./routes')(app);
 require('./lib/db')
 
 app.listen(config.server.port, function () {

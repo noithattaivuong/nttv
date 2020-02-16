@@ -1,11 +1,11 @@
-const UserRouter = require('./routes/UserRouter')
-const DrawRouter = require('./routes/DrawRouter')
-const ProfileRouter = require('./routes/ProfileRouter')
-const ProductRouter = require('./routes/ProductRouter')
-const AccountRouter = require('./routes/AccountRouter')
-const ProjectRouter = require('./routes/ProjectRouter')
+const UserRouter = require('./UserRouter')
+const DrawRouter = require('./DrawRouter')
+const ProfileRouter = require('./ProfileRouter')
+const ProductRouter = require('./ProductRouter')
+const AccountRouter = require('./AccountRouter')
+const ProjectRouter = require('./ProjectRouter')
 const createError = require('http-errors')
-const authenticate = require('./lib/authenticate')
+const authenticate = require('../lib/authenticate')
 
 module.exports = (app) => {
     app.use('/account', AccountRouter)
