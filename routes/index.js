@@ -1,3 +1,4 @@
+const ClientRouter = require('./ClientRouter')
 const UserRouter = require('./UserRouter')
 const DrawRouter = require('./DrawRouter')
 const ProfileRouter = require('./ProfileRouter')
@@ -13,6 +14,7 @@ module.exports = (app) => {
         res.send('hello word')
     })
 
+    app.use('/client', ClientRouter)
     app.use('/account', AccountRouter)
     app.use('/product', ProductRouter)
     app.use('/project', ProjectRouter)
