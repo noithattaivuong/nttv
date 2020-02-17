@@ -19,7 +19,7 @@ module.exports = {
                 where: { ma: ma },
             });
             if (!product) {
-                res.status(401).json({
+                return res.status(400).json({
                     error: {
                         message: 'No such product found'
                     }
@@ -38,7 +38,7 @@ module.exports = {
         try {
             var body = req.body;
             if (!body.name || !body.price) {
-                res.status(401).json({
+                return res.status(400).json({
                     error: {
                         message: 'Vui lòng điền đầy đủ thông tin'
                     }
@@ -62,7 +62,7 @@ module.exports = {
             body.ma = req.params.ma;
             console.log(body);
             if (!body.ma || !body.name || !body.price) {
-                return res.status(401).json({
+                return res.status(400).json({
                     error: {
                         message: 'Vui lòng điền đầy đủ thông tin'
                     }
@@ -73,7 +73,7 @@ module.exports = {
                 where: { ma: body.ma },
             });
             if (!product) {
-                return res.status(401).json({
+                return res.status(400).json({
                     error: {
                         message: 'No such product found'
                     }
@@ -106,7 +106,7 @@ module.exports = {
             body.ma = req.params.ma;
 
             if (!body.ma) {
-                return res.status(401).json({
+                return res.status(400).json({
                     error: {
                         message: 'Vui lòng điền đầy đủ thông tin'
                     }
@@ -117,7 +117,7 @@ module.exports = {
                 where: { ma: body.ma },
             });
             if (!product) {
-                return res.status(401).json({
+                return res.status(400).json({
                     error: {
                         message: 'No such product found'
                     }
