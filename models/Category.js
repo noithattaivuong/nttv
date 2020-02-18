@@ -16,9 +16,4 @@ const Category = sequelize.define('category', {
     }
 });
 
-// create table with product model
-Category.sync()
-    .then(() => console.log('Category table created successfully'))
-    .catch(err => console.log('oooh, did you enter wrong database credentials?'));
-
 module.exports = Category

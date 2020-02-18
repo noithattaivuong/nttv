@@ -1,4 +1,5 @@
 const Product = require("../models/Product");
+const { Op } = require("sequelize");
 
 module.exports = {
     getList: async function (req, res, next) {
@@ -8,6 +9,37 @@ module.exports = {
             res.errorException(error);
         }
     },
+    getListByCategory: async function (req, res, next) {
+        try {
+            var where = {}
+            if (req.params.categoryId) {
+                await Product.findAll({ where: { categoryId: req.params.categoryId } }).then(product => res.json(product))
+            } else {
+                res.json({})
+            }
+        } catch (error) {
+            res.errorException(error);
+        }
+    },
+    getListBySearch: async function (req, res, next) {
+        try {
+            var where = {}
+            if (req.query.name) {
+                await Product.findAll({
+                    where: {
+                        name: {
+                            [Op.like]: '%' + req.query.name + '%'
+                        }
+                    }
+                }).then(product => res.json(product))
+            } else {
+                res.json({})
+            }
+        } catch (error) {
+            res.errorException(error);
+        }
+    },
+
     get: async function (req, res, next) {
         try {
             if (!req.params.id) return res.errorParam();
@@ -50,7 +82,7 @@ module.exports = {
     delete: async function (req, res, next) {
         try {
             if (!req.params.id) return res.errorParam();
-            let product = await Product.findOne({ where: { id: body.id } });
+            let product = await Product.findOne({ where: { id: req.params.id } });
             if (!product) return res.errorNotFound('product');
             await Product.destroy({
                 where: { id: req.params.id }
