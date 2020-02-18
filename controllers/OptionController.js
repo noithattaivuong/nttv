@@ -1,145 +1,70 @@
 const Option = require("../models/Option");
+function getWhere(data) {
+    var where = {}
+    if (data.id) {
+        where.id = data.id;
+    } else {
+        where.key = data.key;
+    }
+    return where;
+}
 
 module.exports = {
     getList: async function (req, res, next) {
         try {
             await Option.findAll().then(option => res.json(option))
         } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
-            })
+            res.errorException(error);
         }
     },
     get: async function (req, res, next) {
         try {
-            const { ma } = req.params;
-            let option = await Option.findOne({
-                where: { ma: ma },
-            });
-            if (!option) {
-                return res.status(400).json({
-                    error: {
-                        message: 'No such option found'
-                    }
-                })
-            }
-            res.json(option)
+            if (!req.params.id || !req.params.key) return res.errorParam();
+            var where = getWhere(req.params);
+            let option = await Option.findOne({ where: where });
+            res.sendObject(option);
         } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
-            })
+            res.errorException(error);
         }
     },
     add: async function (req, res, next) {
         try {
             var body = req.body;
-            if (!body.key || !body.value) {
-                return res.status(400).json({
-                    error: {
-                        message: 'Vui lòng điền đầy đủ thông tin'
-                    }
-                })
-            } else {
-                await Option.create(body).then(option => {
-                    res.json(option)
-                })
-            }
-        } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
+            if (!body.key || !body.value) return res.errorParam();
+            let option = await Option.findOne({ where: getWhere(req.body) });
+            if (option) return res.errorFound('option by key ' + body.key);
+            await Option.create(body).then(option => {
+                res.sendObject(option);
             })
+        } catch (error) {
+            res.errorException(error);
         }
     },
     update: async function (req, res, next) {
         try {
             var body = req.body;
-            body.ma = req.params.ma;
-            if (!body.ma || !body.key || !body.value) {
-                return res.status(400).json({
-                    error: {
-                        message: 'Vui lòng điền đầy đủ thông tin'
-                    }
-                })
-            }
-
-            let option = await Option.findOne({
-                where: { ma: body.ma },
-            });
-            if (!option) {
-                return res.status(400).json({
-                    error: {
-                        message: 'No such option found'
-                    }
-                })
-            }
-
-            await Option.update(body, {
-                where: {
-                    ma: body.ma
-                }
-            }).then(function (option) {
-                res.status(200).json({
-                    success: {
-                        message: 'Update success'
-                    }
-                })
-            });
-
-        } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
+            body.id = req.params.id;
+            if (!body.key || !body.value) return res.errorParam();
+            let option = await Option.findOne({ where: getWhere(req.body) });
+            if (!option) return res.errorNotFound('option');
+            await Option.update(body, { where: { id: option.id } }).then(data => {
+                res.sendUpdateSucess();
             })
+        } catch (error) {
+            res.errorException(error);
         }
     },
     delete: async function (req, res, next) {
         try {
-            var body = req.body;
-            body.ma = req.params.ma;
-
-            if (!body.ma) {
-                return res.status(400).json({
-                    error: {
-                        message: 'Vui lòng điền đầy đủ thông tin'
-                    }
-                })
-            }
-
-            let option = await Option.findOne({
-                where: { ma: body.ma },
-            });
-            if (!option) {
-                return res.status(400).json({
-                    error: {
-                        message: 'No such option found'
-                    }
-                })
-            }
-            await Option.destroy({
-                where: {
-                    ma: body.ma
-                }
-            }).then(function (option) {
-                res.status(200).json({
-                    success: {
-                        message: 'Update success'
-                    }
-                })
-            });
-
-        } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
+            if (!req.params.id) return res.errorParam();
+            let option = await Option.findOne({ where: { id: req.params.id } });
+            if (!option) return res.errorNotFound('option with id=' + req.params.id);
+            var id = option.id;
+            await Option.destroy({ where: { id: req.params.id } }).then(data => {
+                res.sendUpdateSucess();
             })
+        } catch (error) {
+            res.errorException(error);
         }
     },
 }
