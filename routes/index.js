@@ -6,6 +6,7 @@ const ProductRouter = require('./ProductRouter')
 const OptionRouter = require('./OptionRouter')
 const AccountRouter = require('./AccountRouter')
 const ProjectRouter = require('./ProjectRouter')
+const CategoryRouter = require('./CategoryRouter')
 const createError = require('http-errors')
 const authenticate = require('../lib/authenticate')
 const ResError = require("../lib/reponse_error");
@@ -31,6 +32,8 @@ module.exports = (app) => {
     app.use('/account', AccountRouter)
     app.use('/product', ProductRouter)
     app.use('/project', ProjectRouter)
+    app.use('/category', CategoryRouter)
+
     app.use('/profile', authenticate.authorize(), ProfileRouter)
     app.use('/user', authenticate.authorize_admin(), UserRouter)
     app.use('/draw', authenticate.authorize_admin(), DrawRouter)

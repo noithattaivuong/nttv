@@ -5,142 +5,61 @@ module.exports = {
         try {
             await Product.findAll().then(product => res.json(product))
         } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
-            })
+            res.errorException(error);
         }
     },
     get: async function (req, res, next) {
         try {
-            const { ma } = req.params;
-            let product = await Product.findOne({
-                where: { ma: ma },
-            });
-            if (!product) {
-                return res.status(400).json({
-                    error: {
-                        message: 'No such product found'
-                    }
-                })
-            }
-            res.json(product)
+            if (!req.params.id) return res.errorParam();
+            let product = await Product.findOne({ where: { id: req.params.id } });
+            res.sendObject(product, 'product');
         } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
-            })
+            res.errorException(error);
         }
     },
     add: async function (req, res, next) {
         try {
             var body = req.body;
-            if (!body.name || !body.price) {
-                return res.status(400).json({
-                    error: {
-                        message: 'Vui lòng điền đầy đủ thông tin'
-                    }
-                })
-            } else {
-                await Product.create(body).then(product => {
-                    res.json(product)
-                })
-            }
-        } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
+            if (!body.name || !body.price) return res.errorParam();
+            await Product.create(body).then(product => {
+                res.json(product)
             })
+        } catch (error) {
+            res.errorException(error);
         }
     },
     update: async function (req, res, next) {
         try {
             var body = req.body;
-            body.ma = req.params.ma;
-            console.log(body);
-            if (!body.ma || !body.name || !body.price) {
-                return res.status(400).json({
-                    error: {
-                        message: 'Vui lòng điền đầy đủ thông tin'
-                    }
-                })
-            }
+            body.id = req.params.id;
+            if (!body.id || !body.name || !body.price) return res.errorParam();
 
-            let product = await Product.findOne({
-                where: { ma: body.ma },
-            });
-            if (!product) {
-                return res.status(400).json({
-                    error: {
-                        message: 'No such product found'
-                    }
-                })
-            }
+            let product = await Product.findOne({ where: { id: body.id } });
+            if (!product) return res.errorNotFound('product');
 
             await Product.update(body, {
-                where: {
-                    ma: body.ma
-                }
+                where: { id: body.id }
             }).then(function (product) {
-                res.status(200).json({
-                    success: {
-                        message: 'Update success'
-                    }
-                })
+                res.sendUpdateSucess();
             });
 
         } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
-            })
+            res.errorException(error);
         }
     },
     delete: async function (req, res, next) {
         try {
-            var body = req.body;
-            body.ma = req.params.ma;
-
-            if (!body.ma) {
-                return res.status(400).json({
-                    error: {
-                        message: 'Vui lòng điền đầy đủ thông tin'
-                    }
-                })
-            }
-
-            let product = await Product.findOne({
-                where: { ma: body.ma },
-            });
-            if (!product) {
-                return res.status(400).json({
-                    error: {
-                        message: 'No such product found'
-                    }
-                })
-            }
+            if (!req.params.id) return res.errorParam();
+            let product = await Product.findOne({ where: { id: body.id } });
+            if (!product) return res.errorNotFound('product');
             await Product.destroy({
-                where: {
-                    ma: body.ma
-                }
+                where: { id: req.params.id }
             }).then(function (product) {
-                res.status(200).json({
-                    success: {
-                        message: 'Update success'
-                    }
-                })
+                res.sendUpdateSucess();
             });
 
         } catch (error) {
-            res.status(400).json({
-                error: {
-                    message: error.message
-                }
-            })
+            res.errorException(error);
         }
     },
 }
