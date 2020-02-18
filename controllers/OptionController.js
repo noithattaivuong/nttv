@@ -19,7 +19,7 @@ module.exports = {
     },
     get: async function (req, res, next) {
         try {
-            if (!req.params.id || !req.params.key) return res.errorParam();
+            if (!(req.params.id || req.params.key)) return res.errorParam();
             var where = getWhere(req.params);
             let option = await Option.findOne({ where: where });
             res.sendObject(option);
