@@ -41,6 +41,6 @@ const BillDetail = sequelize.define('billdetail', {
 
 BillDetail.sync()
     .then(() => console.log('BillDetail table created successfully'))
-    .catch(err => console.log('oooh, did you enter wrong database credentials?'));
+    .catch(err => console.log('BillDetail, did you enter wrong database credentials?'));
 
 module.exports = BillDetail 

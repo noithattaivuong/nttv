@@ -38,10 +38,10 @@ Product.belongsTo(Category)
 // create table with product model
 Category.sync()
     .then(() => console.log('Category table created successfully'))
-    .catch(err => console.log('oooh, did you enter wrong database credentials?'));
+    .catch(err => console.log('Category, did you enter wrong database credentials?'));
 
 Product.sync()
     .then(() => console.log('Product table created successfully'))
-    .catch(err => console.log('oooh, did you enter wrong database credentials?'));
+    .catch(err => console.log('Product, did you enter wrong database credentials?'));
 
 module.exports = Product

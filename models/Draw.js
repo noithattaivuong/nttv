@@ -24,6 +24,6 @@ const Draw = sequelize.define('draw', {
 // create table with product model
 Draw.sync()
     .then(() => console.log('Draw table created successfully'))
-    .catch(err => console.log('oooh, did you enter wrong database credentials?'));
+    .catch(err => console.log('Draw, did you enter wrong database credentials?'));
 
 module.exports = Draw

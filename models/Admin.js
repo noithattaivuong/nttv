@@ -24,6 +24,6 @@ const Admin = sequelize.define('admin', {
 // create table with user model
 Admin.sync()
     .then(() => console.log('Admin table created successfully'))
-    .catch(err => console.log('oooh, did you enter wrong database credentials?'));
+    .catch(err => console.log('Admin, did you enter wrong database credentials?'));
 
 module.exports = Admin

@@ -28,6 +28,6 @@ const Option = sequelize.define('option', {
 // create table with product model
 Option.sync()
     .then(() => console.log('Option table created successfully'))
-    .catch(err => console.log('oooh, did you enter wrong database credentials?'));
+    .catch(err => console.log('Option, did you enter wrong database credentials?'));
 
 module.exports = Option
