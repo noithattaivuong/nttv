@@ -15,7 +15,7 @@ const Admin = sequelize.define('admin', {
     email: {
         type: Sequelize.STRING,
     },
-    sdt: {
+    phone: {
         type: Sequelize.STRING,
     },
 

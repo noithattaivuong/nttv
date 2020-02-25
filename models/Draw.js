@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../lib/db')
 const Draw = sequelize.define('draw', {
-    ma: {
+    id: {
         type: Sequelize.INTEGER(11),
         primaryKey: true,
         autoIncrement: true
