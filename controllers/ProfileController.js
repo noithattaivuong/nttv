@@ -76,7 +76,7 @@ module.exports = {
     },
     addDraw: async function (req, res, next) {
         try {
-            req.params.username = req.user.username;
+            req.body.username = req.user.username;
             return await DrawController.add(req, res, next);
         } catch (error) {
             res.status(400).json({
