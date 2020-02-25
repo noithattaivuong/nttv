@@ -2,6 +2,7 @@ const User = require("../models/User");
 const Draw = require("../models/Draw");
 const UserController = require("./UserController");
 const DrawController = require("./DrawController");
+const BillController = require("./BillController");
 
 module.exports = {
     getProfile: async function (req, res, next) {
@@ -95,6 +96,22 @@ module.exports = {
                     message: error.message
                 }
             })
+        }
+    },
+    getListBill: async function (req, res, next) {
+        try {
+            req.params.username = req.user.username;
+            return await BillController.getList(req, res, next);
+        } catch (error) {
+            res.errorException(error);
+        }
+    },
+     getBill: async function (req, res, next) {
+        try {
+            req.params.username = req.user.username;
+            return await BillController.get(req, res, next);
+        } catch (error) {
+            res.errorException(error);
         }
     },
 }
