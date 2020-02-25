@@ -24,6 +24,6 @@ const Project = sequelize.define('project', {
 // create table with product model
 Project.sync()
     .then(() => console.log('Project table created successfully'))
-    .catch(err => console.log('oooh, did you enter wrong database credentials?'));
+    .catch(err => console.log('Project, did you enter wrong database credentials?'));
 
 module.exports = Project
