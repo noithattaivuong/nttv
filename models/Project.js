@@ -1,23 +1,23 @@
 // create product model
-const Sequelize = require('sequelize');
+const DataTypes = require('../lib/datatypes');
 const sequelize = require('../lib/db')
 const Project = sequelize.define('project', {
-    ma: {
-        type: Sequelize.INTEGER(11),
+    id: {
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     name: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING_UTF8
     },
     link: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
     },
     detail: {
-        type: Sequelize.TEXT,
+        type: DataTypes.TEXT_UTF8
     },
     description: {
-        type: Sequelize.STRING,
+        type: DataTypes.TEXT_UTF8
     }
 });
 

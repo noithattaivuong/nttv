@@ -27,17 +27,17 @@ module.exports = {
     },
     get: async function (req, res, next) {
         try {
-            const { ma } = req.params;
-            if (!ma) {
+            const { id } = req.params;
+            if (!id) {
                 return res.status(401).json({
                     error: {
-                        message: 'ma not found'
+                        message: 'id not found'
                     }
                 })
             }
 
             let draw = await Draw.findOne({
-                where: { ma: ma },
+                where: { id: id },
             });
 
             if (!draw) {
@@ -127,8 +127,8 @@ module.exports = {
     update: async function (req, res, next) {
         try {
             var body = req.body;
-            body.ma = req.params.ma;
-            if (!body.ma||!body.name || !body.username || !body.value) {
+            body.id = req.params.id;
+            if (!body.id||!body.name || !body.username || !body.value) {
                 return res.status(401).json({
                     error: {
                         message: 'Vui lòng điền đầy đủ thông tin'
@@ -137,7 +137,7 @@ module.exports = {
             }
 
             let draw = await Draw.findOne({
-                where: { ma: body.ma },
+                where: { id: body.id },
             });
             if (!draw) {
                 return res.status(401).json({
@@ -159,7 +159,7 @@ module.exports = {
 
             await Draw.update(body, {
                 where: {
-                    ma: body.ma
+                    id: body.id
                 }
             }).then(function (draw) {
                 res.status(200).json({
@@ -180,9 +180,9 @@ module.exports = {
     delete: async function (req, res, next) {
         try {
             var body = req.body;
-            body.ma = req.params.ma;
+            body.id = req.params.id;
 
-            if (!body.ma) {
+            if (!body.id) {
                 return res.status(401).json({
                     error: {
                         message: 'Vui lòng điền đầy đủ thông tin'
@@ -191,7 +191,7 @@ module.exports = {
             }
 
             let draw = await Draw.findOne({
-                where: { ma: body.ma },
+                where: { id: body.id },
             });
             if (!draw) {
                 return res.status(401).json({
@@ -213,7 +213,7 @@ module.exports = {
 
             await Draw.destroy({
                 where: {
-                    ma: body.ma
+                    id: body.id
                 }
             }).then(function (draw) {
                 res.status(200).json({

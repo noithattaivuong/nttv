@@ -15,7 +15,7 @@ const User = sequelize.define('user', {
     email: {
         type: Sequelize.STRING,
     },
-    sdt: {
+    phone: {
         type: Sequelize.STRING,
     },
 
