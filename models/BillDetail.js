@@ -12,7 +12,7 @@ const BillDetail = sequelize.define('billdetail', {
         type: DataTypes.STRING,
     },
     productId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
     },
     count: {
         type: DataTypes.INTEGER,

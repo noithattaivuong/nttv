@@ -52,7 +52,7 @@ module.exports = {
     add: async function (req, res, next) {
         try {
             var body = req.body;
-            if (!body.name || !body.price) return res.errorParam();
+            if (!body.id || !body.name || !body.price) return res.errorParam();
             await Product.create(body).then(product => {
                 res.json(product)
             })

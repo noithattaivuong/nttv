@@ -4,9 +4,8 @@ const sequelize = require('../lib/db')
 const Category = require('./Category')
 const Product = sequelize.define('product', {
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         primaryKey: true,
-        autoIncrement: true
     },
     name: {
         type: DataTypes.STRING_UTF8,
@@ -22,6 +21,9 @@ const Product = sequelize.define('product', {
     },
     material: {
         type: DataTypes.STRING_UTF8,
+    },
+    color:{
+        type: DataTypes.STRING,
     },
     categoryId: {
         type: DataTypes.INTEGER,
