@@ -44,9 +44,9 @@ module.exports = {
                     if (!detail[i].productId || !detail[i].count) {
                         return res.errorParam('param in detail bill error')
                     }
-                    var productId = parseInt(detail[i].productId);
+                    var productId = detail[i].productId;
                     var count = parseInt(detail[i].count);
-                    if (productId == 0 || count == 0) {
+                    if (count == 0) {
                         return res.errorParam('param in detail bill error')
                     }
                     let product = await Product.findOne({ where: { id: productId } });
